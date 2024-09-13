@@ -1,0 +1,29 @@
+<div class="container">
+    <mat-card>
+        <mat-card-title>Place order</mat-card-title>
+        <mat-card-content>
+            <form [formGroup]="orderForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <input matInput type="text" formControlName="address" placeholder="Address" required/>
+                    <mat-error *ngIf="orderForm.get('address').invalid && orderForm.get('address').touched">
+                        Address is needed to ship your order!
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Desctiption</mat-label>
+                    <input matInput type="text" formControlName="orderDescription" placeholder="Description"/>
+                </mat-form-field>
+
+                <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="orderForm.invalid" (click)="placeOrder()" class="order-button">
+                        Order
+                    </button>
+                    <button mat-stroked-button color="warn" class="close-button" (click)="closeForm()">
+                        Close
+                    </button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
