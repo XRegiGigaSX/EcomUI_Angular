@@ -1,6 +1,7 @@
 # EcomUIAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+The back end of this project is implemented on Java Spring Boot (link to repository) : https://github.com/XRegiGigaSX/EcomDB_SpBootMySQL
 
 ## Development server
 
